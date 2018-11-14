@@ -1,0 +1,50 @@
+{
+  "presets": [
+    "@salesforce/babel-preset-design-system-react",
+    "react", 
+    ["env", { "modules": false }],
+    "flow"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-async-to-generator",
+    ["transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    ["babel-plugin-root-import", 
+      {
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "app"
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env", 
+        "react", 
+        "@salesforce/babel-preset-design-system-react"
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        "transform-async-to-generator",
+        ["transform-runtime",
+          {
+            "regenerator": true
+          }
+        ],
+        ["babel-plugin-root-import", 
+          {
+            "rootPathPrefix": "~",
+            "rootPathSuffix": "app"
+          }
+        ]
+      ]
+    }
+  }
+}
