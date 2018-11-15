@@ -7,8 +7,6 @@ import DevTools from '~/components/DevTools';
 import initStore from '~/config/reduxSetup';
 import configureApi from '~/lib/api';
 
-import '~/css/salesforce-lightning-design-system.css';
-
 export const initApi = service => configureApi(service);
 
 export const init = (el, api) => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import '~/css/salesforce-lightning-design-system.css';
 
 const ContactListItem = ({ contact, navigateToSObject }) =>
     (
