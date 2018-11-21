@@ -8,6 +8,7 @@ const configureApi = service => ({
         fields: ['Id, Name'],
         whereClause: `WHERE Name LIKE '%${name}%' LIMIT 20`
     }),
+    navigateToContact: id => service.navigateToSObjectRecord(id, 'Contact'),
 });
 
 export default (service) => {

@@ -16,7 +16,7 @@ export const api = {
         let filtered = contacts.filter(contact => contact.Name.toLowerCase().indexOf(name.toLowerCase()) > -1);
         return Promise.resolve(filtered);
     },
-    navigateToSObject(id) {
+    navigateToContact(id) {
         console.log(`Navigating to ${id}`);
     }
 };

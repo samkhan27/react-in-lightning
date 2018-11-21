@@ -28,3 +28,17 @@ export function found(results) {
         results
     };
 }
+
+export function navigateToContact(id) {
+    return (dispatch, getState, service) => {
+        service.navigateToContact(id)
+        dispatch(lightningNavigation({ id, sObjectName: 'Contact' }))
+    }
+}
+
+export function lightningNavigation(payload) {
+    return {
+        type: types.LIGHTNING_NAVIGATION,
+        ...payload
+    }
+}

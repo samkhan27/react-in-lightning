@@ -1,9 +1,9 @@
 import React from 'react';
-
+import '~/css/itemStyle.css'
 const ContactListItem = ({ contact, navigateToSObject }) =>
     (
-        <li className="slds-lookup__item">
-            <span role="option" onClick={() => navigateToSObject(contact.Id)} >
+        <li className="slds-lookup__item item">
+            <span role="option" onClick={() => {navigateToSObject(contact.Id)}} >
                 {contact.Name}
             </span>
         </li>

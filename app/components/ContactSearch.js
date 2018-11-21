@@ -23,12 +23,12 @@ class ContactSearch extends Component {
     }
 
     render() {
-        const { testAction } = this.props.actions;
+        const { testAction, navigateToContact } = this.props.actions;
         return (
             <div>
                 <Button label="Placeholder" variant="brand" onClick={() => testAction('Test Placeholder')} />
                 <Input id="base-id" placeholder={this.props.message} onChange={this.onKeyChange} />
-                <ContactList contacts={this.props.results} navigateToSObject={() => console.log('placeholder for navigation service')} />
+                <ContactList contacts={this.props.results} navigateToSObject={(id) => navigateToContact(id)} />
             </div>
         );
     }
